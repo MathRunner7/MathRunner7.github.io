@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff4f9;
+    background-color: #f4f4f9;
     color: #333;
 }
 header {
@@ -16,11 +16,67 @@ main {
     padding: 20px;
 }
 footer {
-    background-color: #333;
+    background-color: #999;
     color: white;
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center; /* Centers the icons */
+    gap: 15px; /* Space between icons */
+    margin: 20px 0;
+}
+
+#social-links a img {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+#social-links a img:hover {
+    transform: scale(1.5); /* Enlarge icon on hover */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 20px auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-item a:hover {
+    background-color: #dcdcdc;
+}
+
+/* Active Link Styling */
+.nav-item.active a {
+    background-color: #b0b0b0;
+    color: white;
 }
