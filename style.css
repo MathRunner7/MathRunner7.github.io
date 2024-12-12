@@ -47,6 +47,54 @@ footer {
     text-transform: uppercase; /* Adds a modern look */
 }
 
+
+/*====================================================================*/
+/* Home Section Styles */
+#home-section {
+    padding: 40px;
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* Prevent overflow of animations */
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
+    justify-content: center; /* Center align the icons */
+    gap: 40px; /* Spacing to prevent overlaps */
+    padding: 50px; /* Add padding for space to float */
+    position: relative; /* Necessary for floating animations */
+    overflow: hidden; /* Prevent icons from escaping container */
+    height: 400px; /* Fixed height to contain floating animations */
+}
+
+/* Skill Icons */
+.skill-icon {
+    width: 80px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+    animation: bubble 5s ease-in-out infinite; /* Floating effect */
+    transition: transform 0.3s;
+}
+
+/* Add hover effect */
+.skill-icon:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Bubble Animation */
+@keyframes bubble {
+    0% {transform: translate(0, 0);} /* Start at original position */
+    25% {transform: translate(-10px, -20px);} /* Move slightly up and left */
+    50% {transform: translate(15px, -10px);} /* Move slightly right and up */
+    75% {transform: translate(-15px, 10px);} /* Move left and down */
+    100% {transform: translate(0, 0);} /* Return to original position */
+}
+
 /*====================================================================*/
 /* Navigation section styling */
 .navbar {
@@ -265,6 +313,10 @@ footer {
 
 .contact-info a {
     color: #007bff; /* Highlight links with blue color */
+    text-decoration: none;
+}
+.contact-info p {
+    color: #000; /* Highlight links with blue color */
     text-decoration: none;
 }
 
