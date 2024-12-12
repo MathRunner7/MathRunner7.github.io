@@ -7,57 +7,110 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="general-configurations">
+    <script src="script.js"></script>
     <header>
-        <h1><img src="assets/my_name.png" alt="Ankit Thummar" style="width:100%; max-height:300px; object-fit:cover;"></h1>
-        <p>Hi, I'm Ankit Thummar, a Data Scientist and Machine Learning Engineer.</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item active"> <a href="#home-section" id="home-link"> <img src="assets/home-icon.svg" alt="Home" class="nav-icon"></a></li>
+                <li class="nav-item"> <a href="#about-section" id="about-link">About</a></li>
+                <li class="nav-item"> <a href="#project-section" id="projects-link">Projects</a></li>
+                <li class="nav-item"> <a href="#contact-section" id="contact-link">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li class="nav-item active"> <a href="index.html">Home</a></li>
-            <li class="nav-item"> <a href="about.html">About</a></li>
-            <li class="nav-item"> <a href="projects.html">Projects</a></li>
-            <li class="nav-item"> <a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Brief history about me and my skill levels for programming languages and data science concepts.</p>
+        <!-- Home Section-->
+        <section id="home-section">
+
         </section>
-        <section id="projects">
+        <!-- About Section -->
+        <section id="about-section">
+            <div class="about-photo">
+                <img src="assets/ankit.jpg" alt="Ankit Thummar">
+            </div>
+            <div class="about-text">
+                <h2>ABOUT</h2>
+                <h3>Here is a little background</h3>
+                <p>
+                    Hi there! 👋<br>
+                    I am a Data Scientist and Machine Learning Engineer with a passion for solving complex problems and making life simpler through data-driven solutions. With over 11 years of leadership experience in the Instrumentation & Control domain within chemical manufacturing industries, I bring a unique blend of engineering expertise and analytical thinking to the field of data science.<br>
+                    Recently, I embarked on an exciting journey to upskill myself in Data Science, mastering Python, SQL, Data Visualization, Machine Learning techniques, AWS, and more. My goal is to leverage these skills to tackle real-world challenges, extract meaningful insights from data, and deliver innovative solutions that drive impactful change.<br>
+                    I am eager to transition my career into this dynamic field and contribute to projects that combine cutting-edge technologies with practical applications to improve human lives.<br>
+                </p>
+            </div>
+        </section>
+        <!-- Project Section -->
+        <section id="project-section" class="project-section">
             <h2>Projects</h2>
-            <p>Coming soon: Python visualizations, Tableau visualizations, and ML models.</p>
+            <div class="project-container">
+                <div class="project-card">
+                    <h3>Machine Learning Models</h3>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="project-card">
+                    <h3>Python Visualization</h3>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="project-card">
+                    <h3>Tableau Visualization</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: thummar_1494601759@yahoo.in</p>
-            <p>.</p>
-            <p>.</p>
-            <p>.</p>
-            <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
 
 
+        <!-- Contact Section -->
+        <section id="contact-section">
+            <div class="contact-container">
+                <!-- Left Column: Email/Phone and Social Media Links -->
+                <div class="contact-left">
+                    <div class="contact-info">
+                        <h2>Contact Me</h2>
+                        <p>Email: <a href="mailto:thummar_1494601759@yahoo.in">thummar_1494601759@yahoo.in</a></p>
+                        <p>Phone: <a href="tel:+919714715149">+919714715149</a></p>
+                    </div>
+                    <div id="social-links" class="contact-social">
+                        <a href="https://www.linkedin.com/in/mathrunner7" target="_blank">
+                            <img src="assets/linkedin1.svg" alt="LinkedIn" class="icon">
+                        </a>
+                        <a href="https://github.com/MathRunner7" target="_blank">
+                            <img src="assets/github.svg" alt="GitHub" class="icon">
+                        </a>
+                        <a href="https://leetcode.com/MathRunner7" target="_blank">
+                            <img src="assets/leetcode.svg" alt="Leetcode" class="icon">
+                        </a>
+                        <a href="https://x.com/MathRunner7" target="_blank">
+                            <img src="assets/x_com.svg" alt="X.com" class="icon">
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Column: Form -->
+                <div class="contact-form">
+                    <h2>Write to Me</h2>
+                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </section>
+
     </main>
     <footer>
         <p>&copy; 2024 Ankit Thummar</p>
-        <div id="social-links">
-            <a href="https://www.linkedin.com/in/mathrunner7" target="_blank">
-                <img src="assets/linkedin1.svg" alt="LinkedIn" class="icon">
-            </a>
-            <a href="https://github.com/MathRunner7" target="_blank">
-                <img src="assets/github.svg" alt="GitHub" class="icon">
-            </a>
-            <a href="https://leetcode.com/MathRunner7" target="_blank">
-                <img src="assets/leetcode.svg" alt="Leetcode" class="icon">
-            </a>
-            <a href="https://x.com/MathRunner7" target="_blank">
-                <img src="assets/x_com.svg" alt="X.com" class="icon">
-            </a>
-        </div>
     </footer>
 </body>
 </html>

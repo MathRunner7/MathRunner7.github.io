@@ -1,20 +1,32 @@
+/*====================================================================*/
+/* Global Configuration */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    background: #FF9933; /* Saffron shade Solid: #FF9933 , Gradient:linear-gradient(135deg, #FF9933, #FFD479) */
+    color: #ffffff; /* Adjust text to be readable */
+    font-family: 'Arial', sans-serif; /* Customize typography */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #444;
 }
+
 header {
-    background-color: #4CAF50;
+    background-color: #FF9933;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    top:0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 5%;
 }
 main {
     margin: 20px;
     padding: 20px;
 }
+
 footer {
     background-color: #999;
     color: white;
@@ -23,8 +35,251 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 5%;
 }
 
+
+.general-configurations h2{
+    font-size: 34px;
+    color: #555; /* Lighter gray */
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Adds a modern look */
+}
+
+/*====================================================================*/
+/* Navigation section styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 1px auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 20px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Icon-specific styles */
+.nav-icon {
+    width: 20px; /* Adjust size */
+    height: 17px;
+    vertical-align: middle; /* Aligns the icon properly */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.nav-icon:hover {
+    transform: scale(2); /* Slight zoom on hover */
+}
+
+/* Hover Effect */
+.nav-item a:hover {
+    background-color: #8f8f8f;
+}
+
+/* Active Link Styling */
+.nav-item a.active {
+    background-color: #8f8f8f; /* Highlighted background */
+    color: #fff; /* White text */
+    border-radius: 5px; /* Rounded edges */
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+
+
+/*====================================================================*/
+/* About Section Styling */
+#about-section {
+    display: flex; /* Ensures the photo and text are side by side */
+    flex-direction: row; /* Aligns items in a horizontal row */
+    align-items: center; /* Vertically centers items */
+    justify-content: center; /* Adds space between photo and text */
+    padding: 40px 10%; /* Adds padding around the section */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    margin: 50px auto; /* Center the section horizontally */
+    max-width: 1200px; /* Limit the total width */
+}
+
+/* Photo on the left */
+.about-photo {
+    flex: 0 0 40%; /* Makes the photo take up 1 part of the space */
+    text-align: center; /* Center-aligns the photo inside its container */
+}
+
+.about-photo img {
+    max-width: 100%; /* Ensures the image doesn't overflow */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Text on the right */
+.about-text {
+    flex: 0 0 70%; /* Makes the text take up 1 part of the space */
+    margin-left: 20px; /* Adds space between the photo and text */
+    color: #333; /* Dark gray text */
+    text-align: justify; /* Justifies text para */
+}
+
+
+.about-text h3 {
+    font-size: 32px;
+    color: #111; /* Very dark gray */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6    ;
+    color: #444;
+}
+
+/* Responsive Design: Stacks the layout on smaller screens */
+@media (max-width: 768px) {
+    #about-section {
+        flex-direction: column; /* Stack photo and text vertically */
+        text-align: center;
+    }
+
+    .about-text {
+        margin-left: 0; /* Remove extra spacing in stacked layout */
+        margin-top: 20px;
+    }
+}
+
+
+/*====================================================================*/
+/* Projects Section Styles */
+.project-section {
+    padding: 40px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center;
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 1200px; /* To center the section on the page */
+}
+
+/* Container for Cards */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Center cards horizontally */
+    align-items: center; /* Center cards vertically */
+    justify-content: space-around; /* Space evenly between cards */
+    margin-top: 20px;
+}
+
+/* Individual Project Card */
+.project-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    padding: 20px;
+    width: 300px; /* Fixed width */
+    height: 300px; /* Make the card square */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    display: flex; /* Flexbox for aligning content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+
+/* Card Heading */
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Card Subtext */
+.project-card p {
+    font-size: 1.2em;
+    color: #999;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/*====================================================================*/
+#contact-section {
+    padding: 40px;
+    background-color: #f9f9f9; /* Light background */
+    text-align: left;
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Overall Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between columns */
+}
+
+/* Left Column (40%) */
+.contact-left {
+    flex: 0 0 40%; /* Fixes the width at 40% */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px; /* Add space between email/phone and social links */
+    padding-right: 20px; /* Add some space from the separator */
+    border-right: 2px solid #ccc; /* Add the vertical separator line */
+}
+
+.contact-info,
+.contact-social {
+    padding: 20px;
+    }
+
+.contact-info a {
+    color: #007bff; /* Highlight links with blue color */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-social a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+/*====================================================================*/
+/* Social Media links styles */
 #social-links {
     display: flex;
     justify-content: center; /* Centers the icons */
@@ -49,43 +304,75 @@ footer {
     fill: white; /* Default fill color */
 }
 
-.navbar {
+/* Right Column (60%) */
+.contact-right {
+    flex: 0 0 60%; /* Fixes the width at 60% */
+}
+
+.contact-form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 10px 30px;
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-    margin: 20px auto;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Space between form elements */
+    background-color: #fff; /* Optional background */
+    padding: 20px; /* Optional padding */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Optional: Center the form horizontally */
 }
 
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 15px;
+.contact-form label {
+    font-weight: bold;
+    color: #555; /* Label text color */
+    display: block;
 }
 
-.nav-item a {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: #333;
-    font-weight: 500;
-    transition: all 0.3s ease;
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Make inputs stretch to the form width */
+    min-width: 200px; /* Optional: Minimum input width */
+    max-width: 350px;
+    padding: 10px; /* Add padding for better UX */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px; /* Ensure readable text size */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+    color: #3       33; /* Text color */
+    background-color: #fff; /* Background color */
 }
 
-/* Hover Effect */
-.nav-item a:hover {
-    background-color: #dcdcdc;
+
+.contact-form button {
+    width: fit-content; /* Make button fit its content */
+    align-self: center; /* Center button horizontally */
+    padding: 10px 20px; /* Padding for the button */
+    border: none;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor for better UX */
+    border-radius: 5px; /* Rounded corners for button */
 }
 
-/* Active Link Styling */
-.nav-item.active a {
-    background-color: #8f8f8f;
-    color: white;
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form input,
+    .contact-form textarea {
+        min-width: 100%; /* Make the input boxes fully responsive on smaller screens */
+    }
 }
