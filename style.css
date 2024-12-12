@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
-    color: #333;
+    color: #444;
 }
 header {
     background-color: #4CAF50;
@@ -38,6 +38,15 @@ footer {
 
 #social-links a img:hover {
     transform: scale(1.5); /* Enlarge icon on hover */
+    fill: #0000ff
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    transition: fill 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    fill: white; /* Default fill color */
 }
 
 .navbar {
@@ -77,6 +86,6 @@ footer {
 
 /* Active Link Styling */
 .nav-item.active a {
-    background-color: #b0b0b0;
+    background-color: #8f8f8f;
     color: white;
 }
