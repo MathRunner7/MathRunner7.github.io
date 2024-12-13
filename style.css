@@ -1,100 +1,97 @@
 /*====================================================================*/
+/* Commonly used variable */
+:root {
+    --background_color: linear-gradient(to bottom, #00246B 0%, #CADCFC 100%); /* Solid Saffron color as common background */
+    --button_color: #FFD479; /* Color for all buttons */
+    --section_background: #CADCFC;
+    --header_color: #00246B;
+    --footer_color: #444;
+    --gray0: #000; /* Medium Grey */
+    --gray1: #111; /* Medium Grey */
+    --gray2: #222; /* Medium Grey */
+    --gray3: #333; /* Medium Grey */
+    --gray4: #444; /* Medium Grey */
+    --gray5: #555; /* Medium Grey */
+    --gray6: #666; /* Medium Grey */
+    --gray7: #777; /* Medium Grey */
+    --gray8: #888; /* Medium Grey */
+    --gray9: #999; /* Medium Grey */
+}
+/*====================================================================*/
 /* Global Configuration */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 10%;
 }
-
+/* Body Configuration */
 body {
-    background: #FF9933; /* Saffron shade Solid: #FF9933 , Gradient:linear-gradient(135deg, #FF9933, #FFD479) */
-    color: #ffffff; /* Adjust text to be readable */
+    background: var(--background_color);
+    color: #000000; /* Adjust text to be readable */
     font-family: 'Arial', sans-serif; /* Customize typography */
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
-
-header {
-    background-color: #FF9933;
-    color: white;
-    padding: 10px;
-    top:0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    height: 5%;
+/* h1 Styling */
+body h1 {
+    font-size: 40px; /* Adjust for your design */
+    text-transform: uppercase; /* Makes all text uppercase */
+    font-weight: bold; /* Optional for emphasis */
+    color: #333; /* Adjust as needed */
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
+/* h2 Styling */
+body h2 {
+    font-size: 28px; /* Slightly smaller than h1 */
+    text-transform: capitalize; /* Title case: capitalizes the first letter of each word */
+    font-weight: bold; /* Optional */
+    color: #444; /* Slightly lighter than h1 */
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+/* h3 Styling */
+body h3 {
+    font-size: 22px; /* Smaller than h2 */
+    text-transform: capitalize; /* Title case or change to 'none' for sentence case */
+    font-weight: normal; /* Optional, for less emphasis */
+    color: #555; /* Lighter shade */
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+/*====================================================================*/
+/* Header configuration */
+header {
+    background-color: var(--header_color);
+    padding: 20px;
+    height: 2vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    top: 0px;
+}
+/* Main configuration */
 main {
     margin: 20px;
     padding: 20px;
 }
-
+/* Footer configuration */
 footer {
-    background-color: #999;
+    background-color: var(--footer_color);
     color: white;
+    width: 100%;
+    height: 2vh;
     text-align: center;
+    line-height: 0vh;
     padding: 10px;
     position: fixed;
     bottom: 0;
-    width: 100%;
-    height: 5%;
 }
-
-
-.general-configurations h2{
-    font-size: 34px;
-    color: #555; /* Lighter gray */
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-    text-transform: uppercase; /* Adds a modern look */
-}
-
-
-/*====================================================================*/
-/* Home Section Styles */
-#home-section {
-    padding: 40px;
-    background-color: #f9f9f9; /* Light gray background */
-    text-align: center;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden; /* Prevent overflow of animations */
-    margin: 40px auto;
-    max-width: 1200px;
-}
-
-/* Skills Container */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
-    justify-content: center; /* Center align the icons */
-    gap: 40px; /* Spacing to prevent overlaps */
-    padding: 50px; /* Add padding for space to float */
-    position: relative; /* Necessary for floating animations */
-    overflow: hidden; /* Prevent icons from escaping container */
-    height: 400px; /* Fixed height to contain floating animations */
-}
-
-/* Skill Icons */
-.skill-icon {
-    width: 80px; /* Icon size */
-    height: auto; /* Maintain aspect ratio */
-    animation: bubble 5s ease-in-out infinite; /* Floating effect */
-    transition: transform 0.3s;
-}
-
-/* Add hover effect */
-.skill-icon:hover {
-    transform: scale(1.2); /* Enlarge on hover */
-}
-
-/* Bubble Animation */
-@keyframes bubble {
-    0% {transform: translate(0, 0);} /* Start at original position */
-    25% {transform: translate(-10px, -20px);} /* Move slightly up and left */
-    50% {transform: translate(15px, -10px);} /* Move slightly right and up */
-    75% {transform: translate(-15px, 10px);} /* Move left and down */
-    100% {transform: translate(0, 0);} /* Return to original position */
-}
-
 /*====================================================================*/
 /* Navigation section styling */
 .navbar {
@@ -102,13 +99,12 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 10px 30px;
+    padding: 5px;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: fit-content;
     margin: 1px auto;
 }
-
 /* Navigation Links */
 .nav-links {
     display: flex;
@@ -117,129 +113,168 @@ footer {
     margin: 0;
     gap: 15px;
 }
-
 .nav-item a {
     text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
     color: #333;
     font-weight: 500;
-    transition: all 0.3s ease;
+    font-size: 20px;
+    transition: all 0.2s ease;
 }
-
 /* Icon-specific styles */
 .nav-icon {
-    width: 20px; /* Adjust size */
-    height: 17px;
+    width: 28px; /* Adjust size */
+    height: 28px;
     vertical-align: middle; /* Aligns the icon properly */
     transition: transform 0.3s; /* Smooth hover effect */
 }
-
 .nav-icon:hover {
-    transform: scale(2); /* Slight zoom on hover */
-}
+    transform: scale(1.5); /* Slight zoom on hover */
 
+}
 /* Hover Effect */
 .nav-item a:hover {
     background-color: #8f8f8f;
+
 }
-
-/* Active Link Styling */
-.nav-item a.active {
-    background-color: #8f8f8f; /* Highlighted background */
-    color: #fff; /* White text */
-    border-radius: 5px; /* Rounded edges */
-    padding: 5px 10px;
-    transition: background-color 0.3s;
+/*====================================================================*/
+/* Home Section Styles */
+#home-section {
+    background-color: var(--section_background);
+    border-radius: 8px;
+    position: relative;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    min-height: 200px;
+    overflow: hidden;
 }
-
-
-
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
+    justify-content: center; /* Center align the icons */
+    gap: 40px; /* Spacing to prevent overlaps */
+    padding: 0px; /* Add padding for space to float */
+    position: relative; /* Necessary for floating animations */
+    width: 100%;
+    height: 100%;
+}
+/* Skill Icons */
+.skill-icon {
+    width: 80px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+    animation: bubble-move 6s ease-in-out infinite; /* Floating effect */
+    transition: transform 0.3s;
+    position: relative;
+    top: calc(10% + 300px * random()); /* Random starting positions */
+    left: calc(10% + 1000px * random()); /* Random starting positions */
+}
+/* Randomize Animation Delay */
+.skill-icon:nth-child(1) { animation-delay: 0.99s; }
+.skill-icon:nth-child(2) { animation-delay: 0.22s; }
+.skill-icon:nth-child(3) { animation-delay: 0.49s; }
+.skill-icon:nth-child(4) { animation-delay: 0.08s; }
+.skill-icon:nth-child(5) { animation-delay: 0.87s; }
+.skill-icon:nth-child(6) { animation-delay: 0.35s; }
+.skill-icon:nth-child(7) { animation-delay: 0.44s; }
+.skill-icon:nth-child(8) { animation-delay: 0.95s; }
+.skill-icon:nth-child(9) { animation-delay: 0.79s; }
+.skill-icon:nth-child(10) { animation-delay: 0.66s; }
+.skill-icon:nth-child(11) { animation-delay: 0.38s; }
+.skill-icon:nth-child(12) { animation-delay: 0.81s; }
+.skill-icon:nth-child(13) { animation-delay: 0.02s; }
+.skill-icon:nth-child(14) { animation-delay: 0.93s; }
+.skill-icon:nth-child(15) { animation-delay: 0.09s; }
+.skill-icon:nth-child(16) { animation-delay: 0.20s; }
+.skill-icon:nth-child(17) { animation-delay: 0.49s; }
+.skill-icon:nth-child(18) { animation-delay: 0.01s; }
+.skill-icon:nth-child(19) { animation-delay: 0.18s; }
+/* Bubble Animation */
+@keyframes bubble-move {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(10px, -20px); }
+    20% { transform: translate(-15px, 11px); }
+    30% { transform: translate(20px, 10px); }
+    40% { transform: translate(-1px, 5px); }
+    50% { transform: translate(-5px, -15px); }
+    60% { transform: translate(20px, -10px); }
+    70% { transform: translate(10px, -25px); }
+    80% { transform: translate(-15px, -20px); }
+    90% { transform: translate(20px, -20px); }
+    100% { transform: translate(0, 0); }
+}
 /*====================================================================*/
 /* About Section Styling */
 #about-section {
-    display: flex; /* Ensures the photo and text are side by side */
-    flex-direction: row; /* Aligns items in a horizontal row */
-    align-items: center; /* Vertically centers items */
-    justify-content: center; /* Adds space between photo and text */
-    padding: 40px 10%; /* Adds padding around the section */
-    background-color: #f9f9f9; /* Light gray background */
-    border-radius: 10px; /* Rounded corners */
-    margin: 50px auto; /* Center the section horizontally */
-    max-width: 1200px; /* Limit the total width */
+    background-color: var(--section_background);
+    border-radius: 8px;
+    position: relative;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    min-height: 200px;
+    overflow: hidden;
 }
-
+.about-container{
+    display: flex; /* Ensures the photo and text are side by side */
+    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
+    flex-direction: row; /* Aligns items in a horizontal row */
+    justify-content: center; /* Adds space between photo and text */
+    align-items: center; /* Vertically centers items */
+    gap: 40px; /* Spacing to prevent overlaps */
+    padding: 0px; /* Add padding for space to float */
+    position: relative; /* Necessary for floating animations */
+    width: 100%;
+    height: 100%;
+}
 /* Photo on the left */
 .about-photo {
     flex: 0 0 40%; /* Makes the photo take up 1 part of the space */
     text-align: center; /* Center-aligns the photo inside its container */
 }
-
 .about-photo img {
     max-width: 100%; /* Ensures the image doesn't overflow */
     height: auto; /* Maintains aspect ratio */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-
 /* Text on the right */
 .about-text {
-    flex: 0 0 70%; /* Makes the text take up 1 part of the space */
+    flex: 0 0 50%; /* Makes the text take up 1 part of the space */
     margin-left: 20px; /* Adds space between the photo and text */
-    color: #333; /* Dark gray text */
     text-align: justify; /* Justifies text para */
 }
-
-
-.about-text h3 {
-    font-size: 32px;
-    color: #111; /* Very dark gray */
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
 .about-text p {
     font-size: 18px;
     line-height: 1.6    ;
-    color: #444;
 }
-
-/* Responsive Design: Stacks the layout on smaller screens */
-@media (max-width: 768px) {
-    #about-section {
-        flex-direction: column; /* Stack photo and text vertically */
-        text-align: center;
-    }
-
-    .about-text {
-        margin-left: 0; /* Remove extra spacing in stacked layout */
-        margin-top: 20px;
-    }
-}
-
-
 /*====================================================================*/
 /* Projects Section Styles */
-.project-section {
-    padding: 40px;
-    background-color: #f9f9f9; /* Light background for contrast */
-    text-align: center;
+#project-section {
+    background-color: var(--section_background);
     border-radius: 8px;
+    position: relative;
+    padding: 40px;
     margin: 40px auto;
-    max-width: 1200px; /* To center the section on the page */
+    max-width: 1200px;
+    min-height: 200px;
+    overflow: hidden;
 }
-
 /* Container for Cards */
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 20px; /* Space between cards */
-    justify-items: center; /* Center cards horizontally */
-    align-items: center; /* Center cards vertically */
-    justify-content: space-around; /* Space evenly between cards */
-    margin-top: 20px;
+.project-container{
+    display: flex; /* Ensures the photo and text are side by side */
+    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
+    flex-direction: row; /* Aligns items in a horizontal row */
+    justify-content: center; /* Adds space between photo and text */
+    align-items: center; /* Vertically centers items */
+    gap: 40px; /* Spacing to prevent overlaps */
+    padding: 10px; /* Add padding for space to float */
+    position: relative; /* Necessary for floating animations */
+    width: 100%;
+    height: 100%;
 }
-
 /* Individual Project Card */
 .project-card {
     background-color: #ffffff; /* White background for cards */
@@ -256,48 +291,38 @@ footer {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
 }
-
-
-/* Card Heading */
-.project-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Card Subtext */
-.project-card p {
-    font-size: 1.2em;
-    color: #999;
-    font-weight: bold;
-}
-
 /* Hover Effect */
 .project-card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
-
 /*====================================================================*/
 #contact-section {
-    padding: 40px;
-    background-color: #f9f9f9; /* Light background */
-    text-align: left;
+    background-color: var(--section_background);
     border-radius: 8px;
+    position: relative;
+    padding: 40px;
     margin: 40px auto;
     max-width: 1200px;
+    min-height: 200px;
+    overflow: hidden;
 }
-
 /* Overall Container */
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between columns */
+    display: flex; /* Ensures the photo and text are side by side */
+    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
+    flex-direction: row; /* Aligns items in a horizontal row */
+    justify-content: center; /* Adds space between photo and text */
+    align-items: stretch; /* Vertically centers items */
+    gap: 10px; /* Spacing to prevent overlaps */
+    padding: 10px; /* Add padding for space to float */
+    position: relative; /* Necessary for floating animations */
+    width: 100%;
+    height: 100%;
 }
-
 /* Left Column (40%) */
 .contact-left {
-    flex: 0 0 40%; /* Fixes the width at 40% */
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -305,95 +330,86 @@ footer {
     padding-right: 20px; /* Add some space from the separator */
     border-right: 2px solid #ccc; /* Add the vertical separator line */
 }
-
-.contact-info,
-.contact-social {
+.contact-info {
+    font-size: 20px;
     padding: 20px;
     }
-
 .contact-info a {
-    color: #007bff; /* Highlight links with blue color */
+    color: #444; /* Highlight links with blue color */
     text-decoration: none;
 }
-.contact-info p {
-    color: #000; /* Highlight links with blue color */
-    text-decoration: none;
-}
-
 .contact-info a:hover {
+
     text-decoration: underline;
 }
-
-.contact-social a {
-    display: block;
-    color: #007bff;
-    text-decoration: none;
-    margin-bottom: 10px;
-}
-/*====================================================================*/
-/* Social Media links styles */
-#social-links {
+.contact-social {
     display: flex;
+    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
+    flex-direction: row; /* Aligns items in a horizontal row */
     justify-content: center; /* Centers the icons */
-    gap: 15px; /* Space between icons */
-    margin: 20px 0;
+    padding: 20px;
+    gap: 20px; /* Space between icons */
 }
+.contact-social a {
 
-#social-links a img {
+    text-decoration: none;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
     transition: transform 0.3s ease; /* Smooth hover effect */
 }
+.icon:hover {
 
-#social-links a img:hover {
     transform: scale(1.5); /* Enlarge icon on hover */
-    fill: #0000ff
 }
-
-.icon {
-    width: 30px;
-    height: 30px;
-    transition: fill 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    fill: white; /* Default fill color */
+/* Map Frame Styling */
+.map-frame {
+    margin-top: 20px; /* Add spacing from address */
+    border: 2px solid #ddd; /* Border around the map */
+    border-radius: 10px; /* Optional rounded corners */
+    overflow: hidden; /* Ensures the map stays within the border */
+    height: 250px; /* Fixed height for square frame */
 }
-
-/* Right Column (60%) */
-.contact-right {
-    flex: 0 0 60%; /* Fixes the width at 60% */
-}
-
+/* Right Column */
 .contact-form {
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
-    gap: 15px; /* Space between form elements */
     background-color: #fff; /* Optional background */
+    gap: 15px; /* Space between form elements */
     padding: 20px; /* Optional padding */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0 auto; /* Optional: Center the form horizontally */
+    max-width: 400px;
+    justify-content: center;
 }
-
+.contact-form form{
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 2px; /* Space between form elements */
+    padding: 20px; /* Optional padding */
+}
 .contact-form label {
     font-weight: bold;
     color: #555; /* Label text color */
     display: block;
 }
-
 .contact-form input,
 .contact-form textarea {
     width: 100%; /* Make inputs stretch to the form width */
-    min-width: 200px; /* Optional: Minimum input width */
-    max-width: 350px;
+    min-width: 100px; /* Optional: Minimum input width */
     padding: 10px; /* Add padding for better UX */
     border: 1px solid #ccc; /* Add a border */
     border-radius: 5px; /* Rounded corners for inputs */
     font-size: 16px; /* Ensure readable text size */
     box-sizing: border-box; /* Ensures padding is included in width calculation */
-    color: #3       33; /* Text color */
+    color: #333; /* Text color */
     background-color: #fff; /* Background color */
 }
-
-
 .contact-form button {
     width: fit-content; /* Make button fit its content */
     align-self: center; /* Center button horizontally */
@@ -405,26 +421,7 @@ footer {
     cursor: pointer; /* Pointer cursor for better UX */
     border-radius: 5px; /* Rounded corners for button */
 }
-
 .contact-form button:hover {
+
     background-color: #0056b3;
-}
-
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .contact-left,
-    .contact-right {
-        flex: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-form input,
-    .contact-form textarea {
-        min-width: 100%; /* Make the input boxes fully responsive on smaller screens */
-    }
 }
