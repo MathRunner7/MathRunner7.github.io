@@ -1,5 +1,34 @@
 /*====================================================================*/
 /* Commonly used variable */
+color_combinations{
+https://webflow.com/blog/best-color-combinations
+Blue, Pastel Pink: #2F3C7E, #FBEAEB;
+Dark charcoal, Bright yellow: #101820, #FEE715;
+Light Red, Yellow: #F96167, #F9E795;
+Cherry red, Off-white: #990011, #FCF6F5;
+Baby blue, White: #8AAAE5, #FFFFFF;
+Dark blue, Light blue: #00246B, #CADCFC;
+Sky blue, Bubblegum pink: #89ABE3, #EA738D;
+Cherry red, Bubblegum pink: #CC313D, #F7C5CC;
+Forest green, Moss green: #2C5F2D, #97BC62;
+Midnight blue, Royal blue, Burgundy red: #1E2761, #408EC6, #7A2048;
+Terracotta red, Light beige, Muted teal: #B85042, #E7E8D1, #A7BEAE;
+Pastel olive green, Salmon pink: #A1BE95, #F98866;
+Deep periwinkle, Soft lilac: #735DA5, #D3C5E5;
+Salmon pink, Soft peach: #F98866, #FFF2D7;
+Seafoam green, Light blue: #C4DFE6, #66A5AD;
+Teal, Light green: #20948B, #6AB187;
+Dark green, Light gray: #31473A, #EDF4F2;
+Cranberry red, Bubblegum: #F52549, #FA6775;
+Deep blue, Orange-red, Yellow-orange: #375E97, #FB6542, #FFBB00;
+Mauve, Dusty rose, Soft blue-gray: #962E2A, #E3867D, #CEE6F2;
+Dark reddish brown, Taupe, Light peachy brown: #330000, #73605B, #D09683;
+Dark navy blue, Bright scarlet red, Light lemon yellow: #5031F, #CB0000, #E4EA8C;
+Teal blue, Light blue, Light gray: #1995AD, #A1D6E2, #F1F1F2;
+Deep navy blue, Bright red, Pale pink: #002C54, #C5001A, #FDF6F6;
+Dark chestnut brown, Burnt sienna, Soft cream: #46211A, #A43820, #F1D3B2;
+Dark charcoal, Deep rust, Sky blue: #2A3132, #763626, #90AFC5
+}
 :root {
     --primary: #20948B;
     --secondary: #6AB187;
