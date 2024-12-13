@@ -1,33 +1,23 @@
-// Select all sections and navigation links
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-item a");
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission behavior
 
-// Observer options
-const options = {
-    threshold: 0.2 // Trigger when 70% of the section is in view
-};
+    // Create a FormData object to hold the form data
+    const formData = new FormData(this);
 
-// Function to remove active class from all links
-function removeActiveClasses() {
-    navLinks.forEach(link => link.classList.remove("active"));
-}
+    // Construct the Google Forms submission URL
+    const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdXPlfPExC2vSpdEbUy1miEsToGdif4UiCzmoJK_yNKZAz1jA/formResponse';
 
-// Function to add active class to the current link
-function addActiveClass(id) {
-    const activeLink = document.querySelector(`a[href="#${id}"]`);
-    if (activeLink) activeLink.classList.add("active");
-}
-
-// Intersection Observer callback
-const observerCallback = (entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            removeActiveClasses();
-            addActiveClass(entry.target.id);
-        }
+    // Submit the form data using fetch API
+    fetch(googleFormURL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors', // Required to avoid CORS issues
+    })
+    .then(() => {
+        alert('Form submitted successfully!');
+        this.reset(); // Optionally reset the form
+    })
+    .catch(() => {
+        alert('There was an error submitting the form.');
     });
-};
-
-// Initialize Intersection Observer
-const observer = new IntersectionObserver(observerCallback, options);
-sections.forEach(section => observer.observe(section));
+});

@@ -1,10 +1,13 @@
 /*====================================================================*/
 /* Commonly used variable */
 :root {
-    --background_color: linear-gradient(to bottom, #00246B 0%, #CADCFC 100%); /* Solid Saffron color as common background */
+    --primary: #20948B;
+    --secondary: #6AB187;
+    --background_color: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 100%);
     --button_color: #FFD479; /* Color for all buttons */
-    --section_background: #CADCFC;
-    --header_color: #00246B;
+    --section_background: var(--secondary);
+    --navbar_background: var(--secondary);
+    --header_color: var(--background_color);
     --footer_color: #444;
     --gray0: #000; /* Medium Grey */
     --gray1: #111; /* Medium Grey */
@@ -21,7 +24,7 @@
 /* Global Configuration */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 10%;
+    scroll-padding-top: 0.1%;
 }
 /* Body Configuration */
 body {
@@ -29,7 +32,7 @@ body {
     color: #000000; /* Adjust text to be readable */
     font-family: 'Arial', sans-serif; /* Customize typography */
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 30px;
     text-align: justify;
     overflow-x: hidden;
     margin: 0;
@@ -98,7 +101,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--navbar_background);
     padding: 5px;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -333,6 +336,7 @@ footer {
 .contact-info {
     font-size: 20px;
     padding: 20px;
+    line-height: 15px;
     }
 .contact-info a {
     color: #444; /* Highlight links with blue color */
