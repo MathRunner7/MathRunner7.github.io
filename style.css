@@ -30,8 +30,8 @@ Dark chestnut brown, Burnt sienna, Soft cream: #46211A, #A43820, #F1D3B2;
 Dark charcoal, Deep rust, Sky blue: #2A3132, #763626, #90AFC5
 }
 :root {
-    --primary: #F98866; #20948B;
-    --secondary: #FFF2D7; #6AB187;
+    --primary: #00246B; #20948B;
+    --secondary: #CADCFC; #6AB187;
     --background_color: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 100%);
     --button_color: #FFD479; /* Color for all buttons */
     --section_background: var(--secondary);
@@ -236,6 +236,46 @@ footer {
     80% { transform: translate(-15px, -20px); }
     90% { transform: translate(20px, -20px); }
     100% { transform: translate(0, 0); }
+}
+/*====================================================================*/
+/* Stats Section Styling */
+/* Style the leetcode-status section */
+#stats-section {
+    background-color: var(--section_background);
+    border-radius: 8px;
+    position: relative;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    min-height: 200px;
+    overflow: hidden;
+}
+.stats-container{
+    display: flex; /* Ensures the photo and text are side by side */
+    flex-wrap: wrap; /* Icons wrap if container width is exceeded */
+    flex-direction: row; /* Aligns items in a horizontal row */
+    justify-content: center; /* Adds space between photo and text */
+    align-items: center; /* Vertically centers items */
+    gap: 40px; /* Spacing to prevent overlaps */
+    padding: 0px; /* Add padding for space to float */
+    position: relative; /* Necessary for floating animations */
+    width: 100%;
+    height: 100%;
+}
+/* Style for individual cards */
+.leetcode-card,
+ .github-card {
+  max-width: 800px;
+  min-width: 500px;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures iframe doesn't overflow */
+}
+/* Style for the iframe */
+.card-frame {
+  width: 100%;
+  height: 200px; /* Adjust height to fit content */
+  border: none;
+  border-radius: 5px; /* Matches parent border radius */
 }
 /*====================================================================*/
 /* About Section Styling */
