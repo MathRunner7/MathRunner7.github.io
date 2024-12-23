@@ -30,8 +30,8 @@ Dark chestnut brown, Burnt sienna, Soft cream: #46211A, #A43820, #F1D3B2;
 Dark charcoal, Deep rust, Sky blue: #2A3132, #763626, #90AFC5
 }
 :root {
-    --primary: #2F3C7E; #20948B;
-    --secondary: #FBEAEB; #6AB187;
+    --primary: #F96167; #20948B;
+    --secondary: #F9E795; #6AB187;
     --background_color: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 100%);
     --button_color: #FFD479; /* Color for all buttons */
     --section_background: var(--secondary);
@@ -368,6 +368,20 @@ footer {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
+
+/* Styles for Tableau Project Thumbnail */
+.tableau-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.tableau-thumbnail:hover {
+
+    transform: scale(1.05);
+}
+
 /*====================================================================*/
 #contact-section {
     background-color: var(--section_background);
