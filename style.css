@@ -512,3 +512,13 @@ footer {
 
     background-color: #0056b3;
 }
+
+/*====================================================================*/
+/* tableau.html */
+#vizContainer{
+    margin-top: 51px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
