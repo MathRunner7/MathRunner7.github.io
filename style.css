@@ -196,7 +196,7 @@ footer {
 /* Skill Icons */
 .skill-icon {
     width: 80px; /* Icon size */
-    height: auto; /* Maintain aspect ratio */
+    height: 80px; /* Maintain aspect ratio */
     animation: bubble-move 6s ease-in-out infinite; /* Floating effect */
     transition: transform 0.3s;
     position: relative;
@@ -209,8 +209,8 @@ footer {
 .skill-icon:nth-child(3) { animation-delay: 0.49s; }
 .skill-icon:nth-child(4) { animation-delay: 0.08s; }
 .skill-icon:nth-child(5) { animation-delay: 0.87s; }
-.skill-icon:nth-child(6) { animation-delay: 0.35s; }
-.skill-icon:nth-child(7) { animation-delay: 0.44s; }
+.skill-icon:nth-child(6) { animation-delay: 0.25s; }
+.skill-icon:nth-child(7) { animation-delay: 0.54s; }
 .skill-icon:nth-child(8) { animation-delay: 0.95s; }
 .skill-icon:nth-child(9) { animation-delay: 0.79s; }
 .skill-icon:nth-child(10) { animation-delay: 0.66s; }
@@ -223,6 +223,9 @@ footer {
 .skill-icon:nth-child(17) { animation-delay: 0.49s; }
 .skill-icon:nth-child(18) { animation-delay: 0.01s; }
 .skill-icon:nth-child(19) { animation-delay: 0.18s; }
+.skill-icon:nth-child(20) { animation-delay: 0.25s; }
+.skill-icon:nth-child(21) { animation-delay: 0.59s; }
+.skill-icon:nth-child(22) { animation-delay: 0.71s; }
 /* Bubble Animation */
 @keyframes bubble-move {
     0% { transform: translate(0, 0); }
@@ -379,7 +382,6 @@ footer {
     justify-content: center; /* Center the images horizontally */
     align-items: center; /* Center the images vertically */
 }
-
 .carousel-image {
     width: 100%;
     height: auto;
@@ -388,12 +390,10 @@ footer {
     opacity: 0; /* Initially hidden */
     position: absolute;
 }
-
 .carousel-image.active {
     opacity: 1; /* Show active image */
+
 }
-
-
 /* Styles for Tableau Project Thumbnail */
 .tableau-thumbnail {
     width: 100%;
