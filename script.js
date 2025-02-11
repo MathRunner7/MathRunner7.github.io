@@ -23,20 +23,28 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".carousel-image");
-    let currentIndex = 0;
+    // Select all carousel containers
+    const carousels = document.querySelectorAll(".image-carousel");
 
-    function showNextImage() {
-        // Hide the current image
-        images[currentIndex].classList.remove("active");
+    carousels.forEach(carousel => {
+        const images = carousel.querySelectorAll(".carousel-image");
+        let currentIndex = 0;
 
-        // Increment index and loop back to the first image if necessary
-        currentIndex = (currentIndex + 1) % images.length;
+        if (images.length === 0) return; // Skip empty carousels
 
-        // Show the next image
-        images[currentIndex].classList.add("active");
-    }
+        function showNextImage() {
+            // Hide the current image
+            images[currentIndex].classList.remove("active");
 
-    // Start the carousel
-    setInterval(showNextImage, 2000); // Change image every 2 seconds
+            // Increment index and loop back if necessary
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Show the next image
+            images[currentIndex].classList.add("active");
+        }
+
+        // Start an independent carousel for each section
+        images[0].classList.add("active"); // Ensure first image is visible
+        setInterval(showNextImage, 2000); // Change every 2 seconds
+    });
 });
