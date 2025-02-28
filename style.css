@@ -226,6 +226,13 @@ footer {
 .skill-icon:nth-child(20) { animation-delay: 0.25s; }
 .skill-icon:nth-child(21) { animation-delay: 0.59s; }
 .skill-icon:nth-child(22) { animation-delay: 0.71s; }
+.skill-icon:nth-child(23) { animation-delay: 0.37s; }
+.skill-icon:nth-child(24) { animation-delay: 0.59s; }
+.skill-icon:nth-child(25) { animation-delay: 0.21s; }
+.skill-icon:nth-child(26) { animation-delay: 0.62s; }
+.skill-icon:nth-child(27) { animation-delay: 0.97s; }
+.skill-icon:nth-child(28) { animation-delay: 0.46s; }
+.skill-icon:nth-child(29) { animation-delay: 0.07s; }
 /* Bubble Animation */
 @keyframes bubble-move {
     0% { transform: translate(0, 0); }
